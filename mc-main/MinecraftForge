@@ -1,0 +1,17 @@
+cd $(dirname $0)
+path=$(python startup.py)
+wdir=$(pwd)
+if [ -e "excute/*.py" ];then
+for i in "excute/*.py"
+do
+if [ $i != "excute/api.py" ];then
+python $i &
+fi
+done
+fi
+cd $wdir
+python -X faulthandler window.py $path
+if [ -s fault ];then
+python report_fault.py
+fi
+python cleanup.py
