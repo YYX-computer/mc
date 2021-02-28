@@ -242,10 +242,7 @@ def genMap(t,modlist,structure = None,titan = False):
 			s,ub = 1500,15
 		'''
 		for `CLASSIC` mode,we have
-		- moutain
-		- sea
 		- trees
-		- village
 		and for size we have
 		- 3000x3000xN(1 ≤ N ≤ 10)
 		'''
